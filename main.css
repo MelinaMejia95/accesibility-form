@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container form .form-card {
+  background-color: white;
+  border-radius: 3%;
+  padding: 1rem 2rem;
+  display: grid;
+  margin: 1rem 0;
+  width: 100%;
+}
+.container form .form-card .form-card__title {
+  font-size: 22px;
+  font-weight: bold;
+}
+.container form .form-card input {
+  background-color: #bcffff;
+  border-color: blue;
+}
+.container form .form-card select {
+  border: 1px solid #ccc;
+  padding: 0.2rem 0.5rem;
+}
+.container form button {
+  background-color: #ffe9c2;
+  border-color: orange;
+  width: 90%;
+}
+
+@media (min-width: 40rem) {
+  .container {
+    height: 100%;
+  }
+  .container form {
+    width: 60%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
