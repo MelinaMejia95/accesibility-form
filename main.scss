@@ -36,16 +36,25 @@ body {
         font-size: 22px;
         font-weight: bold;
       }
+
+      .form-card__fields {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+
+          input {
+            background-color: rgb(188, 255, 255);
+            border-color: blue;
+            margin-bottom: 1rem;
+          }
       
-      input {
-        background-color: rgb(188, 255, 255);
-        border-color: blue;
+          select {
+            border: 1px solid #ccc;
+            padding: 0.2rem 0.5rem;
+            margin-bottom: 1rem;
+          }
       }
-  
-      select {
-        border: 1px solid #ccc;
-        padding: 0.2rem 0.5rem;
-      }
+      
     }
 
     button {
@@ -64,6 +73,18 @@ body {
 
     form {
       width: 60%;
+
+      .form-card {
+        .form-card__fields {
+          display: grid;
+          grid-template-columns: 20% 80%;
+          grid-row-gap: 1rem;
+
+          input, select {
+            margin-bottom: 0.2rem;
+          }
+        }
+      }
 
     }
   }
