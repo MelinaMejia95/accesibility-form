@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./tours.css">
+  <link rel="stylesheet" href="../main.css">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="main-header">
+      <a href="../index.html">TEST</a>
+      <a href="index.html">Book a tour</a>
+  </header>
+  <div class="backdrop"></div>
+  <div class="modal">
+      <h1 class="modal__title">Do you want to continue?</h1>
+      <div class="modal__actions">
+          <a href="../index.html" class="modal__action">Yes!</a>
+          <button class="modal__action modal__action--negative" type="button">No!</button>
+      </div>
+  </div>
+  <main class="schedule-page">
+    <form action="" class="schedule-form">
+      <label for="names" id="namesLabel">Name: </label>
+      <input type="text" id="names" aria-labelledby="namesLabel">
+      <label for="lastname" id="lastnameLabel">Lastname: </label>
+      <input type="text" id="lastname" aria-labelledby="lastnameLabel">
+      <label for="email" id="emailLabel">Email: </label>
+      <input type="email" id="email" aria-labelledby="email">
+      <label for="cellphone" id="cellphoneLabel">Cellphone: </label>
+      <input type="text" id="cellphone" aria-labelledby="cellphoneLabel">
+      <label for="city" id="cityLabel">City: </label>
+      <select name="cities" id="city" aria-labelledby="cityLabel">
+        <option value="">Medellín</option>
+        <option value="">Cali</option>
+        <option value="">Bogotá</option>
+      </select>
+      <button type="button" class="button">
+        Send
+      </button>
+    </form>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
