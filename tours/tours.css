@@ -64,7 +64,7 @@
   background: white;
   padding: 1rem;
   border: 1px solid #ccc;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 .modal .modal__title {
   text-align: center;
@@ -74,27 +74,29 @@
   text-align: center;
 }
 .modal .modal__action {
-  border: 1px solid #0e4f1f;
-  background: #0e4f1f;
+  border: 1px solid #EE587D;
+  background: #EE587D;
   text-decoration: none;
   color: white;
   font: inherit;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  border-radius: 10px;
 }
 .modal .modal__action:hover,
 .modal .modal__action:active {
-  background: #2ddf5c;
-  border-color: #2ddf5c;
+  background: white;
+  color: #EE587D;
 }
 .modal .modal__action--negative {
-  background: red;
-  border-color: red;
+  background: #332965;
+  border-color: #332965;
 }
 .modal .modal__action--negative:hover,
 .modal .modal__action--negative:active {
-  background: #ff5454;
-  border-color: #ff5454;
+  background: white;
+  border-color: #332965;
+  color: #332965;
 }
 
 .open {
