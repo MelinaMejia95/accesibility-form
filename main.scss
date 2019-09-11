@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Manjari:100,400,700|Poppins:400,600,700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -10,26 +11,91 @@ html {
 body {
   margin: 0;
   height: 100%;
+  font-family: "Manjari", sans-serif;
 }
 
 .main-header {
-  height: 3rem;
-  background-color: black;
+  height: 3.5rem;
+  background-color: #332965;
   color: white;
   font-size: 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 1rem;
+
+  .menu-button {
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #EE587D;
+    border: 3px solid #EE587D;
+    color: white;
+  }
+
+  .menu-button:hover {
+    background-color: white;
+    color: #EE587D;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
 
 }
 
-.package {
-  width: 50%;
-  background-color: gainsboro;
-  border: 2px solid black;
-  position: relative;
-  margin: 2rem;
-  overflow: hidden;
+main {
+  .main-title{
+    text-align: center;
+    color: #6446B2;
+    font-weight: bold;
+  }
+
+  .package {
+    width: 50%;
+    background-color: #c190dd24;
+    border: 4px solid #342964;
+    position: relative;
+    margin: 2rem;
+    overflow: hidden;
+    padding: 0 2rem;
+  }
+
+  .package:hover {
+    border-color: #EE587D;
+  }
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0 1rem;
+
+  .menu-list {
+    margin: 0;
+    background-color: #EE587D;
+    border-radius: 10px;
+    padding: 1rem;
+    padding-left: 42px;
+    color: #342964;
+    font-family: inherit;
+    cursor: pointer;
+
+    li {
+      font-size: 2rem;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
 }
 
 .clearfix{
@@ -43,8 +109,11 @@ body {
 .main-footer{
   background-color: black;
   color: white;
-  height: 3rem;
+  height: 4rem;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 [hidden] { display: none; }

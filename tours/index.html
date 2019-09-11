@@ -7,45 +7,62 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./tours.css">
   <link rel="stylesheet" href="../main.css">
-
   <title>Document</title>
 </head>
 
 <body>
   <header class="main-header">
-      <a href="../index.html">TEST</a>
-      <a href="index.html">Book a tour</a>
+    <a href="index.html" tabindex="0">TEST</a>
+    <button aria-expanded="false" class="menu-button">Menu</button>
   </header>
-  <div class="backdrop"></div>
-  <div class="modal">
-      <h1 class="modal__title">Do you want to continue?</h1>
-      <div class="modal__actions">
-          <a href="../index.html" class="modal__action">Yes!</a>
-          <button class="modal__action modal__action--negative" type="button">No!</button>
-      </div>
+  <div class="menu">
+    <ul hidden id="menu-list" class="menu-list">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="tours/index.html" tabindex="0">Book a tour</a>
+      </li>
+      <li><a href="/shop">About us</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="backdrop" hidden></div>
+  <div class="modal" role="dialog" aria-labelledby="modal-title" tabindex="-1" hidden>
+    <h1 id="modal-title" class="modal__title">Do you want to continue?</h1>
+    <div class="modal__actions">
+      <a href="../index.html" class="modal__action">Yes!</a>
+      <button class="modal__action modal__action--negative" type="button">No!</button>
+    </div>
   </div>
   <main class="schedule-page">
-    <form action="" class="schedule-form">
+    <label class="schedule-page__title">Great! Let's get in touch</label>
+    <form class="schedule-form">
       <label for="names" id="namesLabel">Name: </label>
-      <input type="text" id="names" aria-labelledby="namesLabel">
+      <input type="text" id="names" aria-labelledby="namesLabel" aria-required="true">
       <label for="lastname" id="lastnameLabel">Lastname: </label>
-      <input type="text" id="lastname" aria-labelledby="lastnameLabel">
+      <input type="text" id="lastname" aria-labelledby="lastnameLabel" aria-required="true">
       <label for="email" id="emailLabel">Email: </label>
-      <input type="email" id="email" aria-labelledby="email">
+      <input type="email" id="email" aria-labelledby="email" aria-required="true">
       <label for="cellphone" id="cellphoneLabel">Cellphone: </label>
       <input type="text" id="cellphone" aria-labelledby="cellphoneLabel">
       <label for="city" id="cityLabel">City: </label>
-      <select name="cities" id="city" aria-labelledby="cityLabel">
+      <select name="cities" id="city" aria-labelledby="cityLabel" aria-required="true">
+        <option value="">Select an option</option>
         <option value="">Medellín</option>
         <option value="">Cali</option>
         <option value="">Bogotá</option>
       </select>
-      <button type="button" class="button">
+      <button type="button" class="button" onclick="openModal()">
         Send
       </button>
     </form>
   </main>
+  <footer class="main-footer">
+      <label for="">Made with  ❤️ in Medellín</label>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/ally.js/1.4.1/ally.min.js"></script>
   <script src="index.js"></script>
+  <script src="../index.js"></script>
+
 </body>
 
 </html>

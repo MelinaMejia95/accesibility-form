@@ -12,19 +12,20 @@
 <body>
   <header class="main-header">
     <a href="index.html" tabindex="0">TEST</a>
-    <div>
-      <a href="tours/index.html" tabindex="0">Book a tour</a>
-      <button aria-expanded="false" class="menu-button">Menu</button>
-      <ul hidden>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/shop">Shop</a></li>
-          <li><a href="/contact">Contact</a></li>
-      </ul>
-    </div>
+    <button aria-expanded="false" class="menu-button">Menu</button>
   </header>
+  <div class="menu">
+    <ul hidden id="menu-list" class="menu-list">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="tours/index.html" tabindex="0">Book a tour</a>
+      </li>
+      <li><a href="/shop">About us</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
   <main>
-    <h1 tabindex="0">Choose your plan</h1>
+    <h1 tabindex="0" class="main-title">Choose your plan</h1>
     <section class="package" id="free">
       <h1 class="package__title" tabindex="0">TEST</h1>
       <h2 class="package__subtitle" tabindex="0">asdfh</h2>
@@ -43,7 +44,7 @@
     </section>
   </main>
   <footer class="main-footer">
-    <label for="">Made with love in Medellín</label>
+    <label for="">Made with  ❤️ in Medellín</label>
   </footer>
   <script src="index.js"></script>
 </body>

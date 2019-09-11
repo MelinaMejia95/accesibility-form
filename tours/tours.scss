@@ -1,19 +1,60 @@
 
+.schedule-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 7.5rem);
 
-form {
-  margin: auto;
-  width: 30rem;
-  grid-template-columns: 10rem auto;
-  grid-row-gap: 1rem;
-  grid-column-gap: 0.5rem;
-  display: grid;
-  padding: 1rem;
+  .schedule-page__title{
+    font-size: 3rem;
+    color: #94377C;
+  }
+
+  form {
+    width: 30rem;
+    grid-template-columns: 10rem auto;
+    grid-row-gap: 1rem;
+    grid-column-gap: 0.5rem;
+    display: grid;
+    padding: 1rem;
+
+    label {
+      font-size: 2rem;
+    }
+
+    input:hover {
+      border: 1px solid #9756E7;
+    }
+
+    select {
+      height: 100%;
+    }
+
+    button {
+      grid-column: 1/3;
+      width: 50%;
+      justify-self: center;
+      height: 2rem;
+      background-color: #EE587D;
+      color: white;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    button:hover{
+      background-color: white;
+      color: #EE587D;
+      border: 1px solid #EE587D;
+    }
+  }
+
 }
+
 
 .backdrop {
   position: fixed;
-  display: none;
-  opacity: 0;
+  //opacity: 0;
   top: 0;
   left: 0;
   z-index: 100;
@@ -25,9 +66,8 @@ form {
 
 .modal {
   position: fixed;
-  opacity: 0;
   transform: translateY(-3rem);
-  transition: opacity 200ms ease-out, transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
   z-index: 200;
   top: 20%;
   left: 30%;
@@ -79,4 +119,6 @@ form {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
+.modal[hidden] { display: none; }
 
