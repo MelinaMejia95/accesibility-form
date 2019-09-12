@@ -18,17 +18,31 @@
     grid-column-gap: 0.5rem;
     display: grid;
     padding: 1rem;
+    align-items: center;
+
+    .form-row__container {
+      display: flex;
+      flex-direction: column;
+
+      input, select {
+        height: 2rem;
+        margin-bottom: 0.4rem;
+      }
+
+      input:hover {
+        border: 1px solid #9756E7;
+      }
+      
+      label {
+        font-size: 0.7rem;
+        color: red;
+        font-weight: bold;
+      }
+
+    }
 
     label {
       font-size: 2rem;
-    }
-
-    input:hover {
-      border: 1px solid #9756E7;
-    }
-
-    select {
-      height: 100%;
     }
 
     button {

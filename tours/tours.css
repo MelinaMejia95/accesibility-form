@@ -16,15 +16,26 @@
   grid-column-gap: 0.5rem;
   display: grid;
   padding: 1rem;
+  align-items: center;
+}
+.schedule-page .schedule-page__form .form-row__container {
+  display: flex;
+  flex-direction: column;
+}
+.schedule-page .schedule-page__form .form-row__container input, .schedule-page .schedule-page__form .form-row__container select {
+  height: 2rem;
+  margin-bottom: 0.4rem;
+}
+.schedule-page .schedule-page__form .form-row__container input:hover {
+  border: 1px solid #9756E7;
+}
+.schedule-page .schedule-page__form .form-row__container label {
+  font-size: 0.7rem;
+  color: red;
+  font-weight: bold;
 }
 .schedule-page .schedule-page__form label {
   font-size: 2rem;
-}
-.schedule-page .schedule-page__form input:hover {
-  border: 1px solid #9756E7;
-}
-.schedule-page .schedule-page__form select {
-  height: 100%;
 }
 .schedule-page .schedule-page__form button {
   grid-column: 1/3;

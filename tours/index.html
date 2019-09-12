@@ -35,31 +35,45 @@
   </div>
   <main class="schedule-page">
     <label class="schedule-page__title">Great! Let's get in touch</label>
-    <form class="schedule-page__form">
+    <form class="schedule-page__form" onsubmit="openModal()">
       <label for="names" id="namesLabel">Name: </label>
-      <input type="text" id="names" aria-labelledby="namesLabel" aria-required="true">
+      <div class="form-row__container">
+        <input type="text" id="names" aria-labelledby="namesLabel" aria-required="true">
+        <label for="">Please enter your name</label>
+      </div>
       <label for="lastname" id="lastnameLabel">Lastname: </label>
-      <input type="text" id="lastname" aria-labelledby="lastnameLabel" aria-required="true">
+      <div class="form-row__container">
+        <input type="text" id="lastname" aria-labelledby="lastnameLabel" aria-required="true">
+        <label for="">Please enter your lastname</label>
+      </div>
       <label for="email" id="emailLabel">Email: </label>
-      <input type="email" id="email" aria-labelledby="email" aria-required="true">
+      <div class="form-row__container">
+        <input type="email" id="email" aria-labelledby="email" aria-required="true">
+        <label for="">Make sure your email is correct</label>
+      </div>
       <label for="cellphone" id="cellphoneLabel">Cellphone: </label>
-      <input type="text" id="cellphone" aria-labelledby="cellphoneLabel">
+      <div class="form-row__container">
+        <input type="text" id="cellphone" aria-labelledby="cellphoneLabel">
+      </div>
       <label for="city" id="cityLabel">City: </label>
-      <select name="cities" id="city" aria-labelledby="cityLabel" aria-required="true">
-        <option value="">Select an option</option>
-        <option value="">Medellín</option>
-        <option value="">Cali</option>
-        <option value="">Bogotá</option>
-      </select>
-      <button type="button" class="button" onclick="openModal()">
+      <div class="form-row__container">
+        <select name="cities" id="city" aria-labelledby="cityLabel" aria-required="true">
+          <option value="">Select an option</option>
+          <option value="">Medellín</option>
+          <option value="">Cali</option>
+          <option value="">Bogotá</option>
+        </select>
+        <label for="">Please select your city</label>
+      </div>
+      <button type="submit" class="button">
         Send
       </button>
     </form>
     <label id="schedule-page__message" hidden>Thanks!</label>
   </main>
   <footer class="main-footer">
-      <label for="">Made with  ❤️ in Medellín</label>
-    </footer>
+    <label for="">Made with ❤️ in Medellín</label>
+  </footer>
   <script src="https://cdn.jsdelivr.net/ally.js/1.4.1/ally.min.js"></script>
   <script src="index.js"></script>
   <script src="../index.js"></script>
