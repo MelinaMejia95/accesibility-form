@@ -11,7 +11,7 @@
     color: #94377C;
   }
 
-  form {
+  .schedule-page__form {
     width: 30rem;
     grid-template-columns: 10rem auto;
     grid-row-gap: 1rem;
@@ -47,6 +47,11 @@
       color: #EE587D;
       border: 1px solid #EE587D;
     }
+  }
+
+  #schedule-page__message {
+    font-size: 5rem;
+    font-weight: bold;
   }
 
 }
@@ -122,5 +127,5 @@
   transform: translateY(0) !important;
 }
 
-.modal[hidden] { display: none; }
+.modal[hidden] { display: none !important; }
 

@@ -43,6 +43,7 @@ body {
   a {
     text-decoration: none;
     color: white;
+    height: 1.5rem;
   }
 
 }
@@ -116,4 +117,4 @@ main {
   align-items: center;
 }
 
-[hidden] { display: none; }
+[hidden] { display: none !important; }

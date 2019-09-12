@@ -3,6 +3,8 @@ var button = document.querySelector('.button');
 var closeModalButton = document.querySelector('.modal__action--negative');
 var modal = document.querySelector('.modal');
 var backdrop = document.querySelector('.backdrop');
+var infoMessage = document.querySelector('#schedule-page__message');
+var form = document.querySelector('.schedule-page__form');
 var disabledHandle, tabHandle;
 
 function openModal() {
@@ -21,6 +23,8 @@ function closeModal() {
   backdrop.hidden = true;
   disabledHandle.disengage();
   tabHandle.disengage();
+  infoMessage.hidden = false;
+  form.hidden = true;
 }
 
 button.addEventListener('click', openModal, false);

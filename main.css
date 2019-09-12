@@ -40,6 +40,7 @@ body {
 .main-header a {
   text-decoration: none;
   color: white;
+  height: 1.5rem;
 }
 
 main .main-title {
@@ -105,7 +106,7 @@ main .package:hover {
 }
 
 [hidden] {
-  display: none;
+  display: none !important;
 }
 
 /*# sourceMappingURL=main.css.map */
