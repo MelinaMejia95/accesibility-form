@@ -26,30 +26,30 @@
     </ul>
   </div>
   <div class="backdrop" hidden></div>
-  <div class="modal" role="dialog" aria-labelledby="modal-title" tabindex="-1" hidden>
+  <dialog class="modal" role="dialog" aria-labelledby="modal-title" hidden>
     <h1 id="modal-title" class="modal__title">Do you want to continue?</h1>
     <div class="modal__actions">
       <a href="../index.html" class="modal__action">Yes!</a>
       <button class="modal__action modal__action--negative" type="button">No!</button>
     </div>
-  </div>
+  </dialog>
   <main class="schedule-page">
     <label class="schedule-page__title">Great! Let's get in touch</label>
-    <form class="schedule-page__form" onsubmit="openModal()">
+    <form class="schedule-page__form" novalidate>
       <label for="names" id="namesLabel">Name: </label>
       <div class="form-row__container">
-        <input type="text" id="names" aria-labelledby="namesLabel" aria-required="true">
-        <label for="">Please enter your name</label>
+        <input type="text" id="names" aria-labelledby="namesLabel" aria-required="true" required >
+        <label id="namesError" aria-live="assertive"></label>
       </div>
       <label for="lastname" id="lastnameLabel">Lastname: </label>
       <div class="form-row__container">
         <input type="text" id="lastname" aria-labelledby="lastnameLabel" aria-required="true">
-        <label for="">Please enter your lastname</label>
+        <label id="lastnameError">Please enter your lastname</label>
       </div>
       <label for="email" id="emailLabel">Email: </label>
       <div class="form-row__container">
         <input type="email" id="email" aria-labelledby="email" aria-required="true">
-        <label for="">Make sure your email is correct</label>
+        <label id="emailError">Make sure your email is correct</label>
       </div>
       <label for="cellphone" id="cellphoneLabel">Cellphone: </label>
       <div class="form-row__container">

@@ -1,5 +1,5 @@
 
-var button = document.querySelector('.button');
+/*var button = document.querySelector('.button');
 var closeModalButton = document.querySelector('.modal__action--negative');
 var modal = document.querySelector('.modal');
 var backdrop = document.querySelector('.backdrop');
@@ -29,21 +29,29 @@ function closeModal() {
 
 button.addEventListener('click', openModal, false);
 closeModalButton.addEventListener('click', closeModal, false);
+*/
 
-
-/*var backdrop = document.querySelector('.backdrop');
+var backdrop = document.querySelector('.backdrop');
 var modal = document.querySelector('.modal');
 var button = document.querySelector('.button');
 var closeModalButton = document.querySelector('.modal__action--negative');
 
 
-button.addEventListener('click', () => {
+/* button.addEventListener('click', () => {
   modal.classList.add('open');
   backdrop.style.display = 'block';
         setTimeout(() => {
             backdrop.classList.add('open');
         }, 10);
-});
+}); */
+
+function openModal() {
+  modal.classList.add('open');
+  backdrop.style.display = 'block';
+        setTimeout(() => {
+            backdrop.classList.add('open');
+        }, 10);
+}
 
 if (closeModalButton) {
   closeModalButton.addEventListener('click', closeModal);
@@ -61,4 +69,39 @@ function closeModal() {
   setTimeout(() => {
       backdrop.style.display = 'none';
   }, 200);
-}*/
+}
+
+const element = document.querySelector('form');
+element.addEventListener('submit', (event) => {
+  event.preventDefault();
+  try {
+    const nameInput = document.querySelector('#names');
+    const labelNameError = document.querySelector('#namesError');
+    validateName(nameInput, labelNameError);
+    const lastnameInput = document.querySelector('#lastname');
+    const labelLastnameError = document.querySelector('#lastnameError');
+    validateName(lastnameInput, labelLastnameError);
+    /* const emailInput = document.querySelector('#email');
+    const labelEmailError = document.querySelector('#emailError');
+    validateEmail(emailInput, labelEmailError); */
+    openModal();
+  }
+  catch (err){
+    console.log(err.message)
+  }
+  
+})
+
+function validateName(field, errorField) {
+  if(field.value === '' || field.value === undefined ) {
+    field.focus();
+    throw new Error(`Whooops!' ${field.id} field is empty`);
+  } else {
+    errorField.hidden = true;
+  }
+}
+
+function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}

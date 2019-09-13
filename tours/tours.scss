@@ -27,6 +27,9 @@
       input, select {
         height: 2rem;
         margin-bottom: 0.4rem;
+        background-color: white;
+        border: 0.5px solid #dfdfdf;
+        border-radius: 5px;
       }
 
       input:hover {

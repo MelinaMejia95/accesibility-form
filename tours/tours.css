@@ -25,6 +25,9 @@
 .schedule-page .schedule-page__form .form-row__container input, .schedule-page .schedule-page__form .form-row__container select {
   height: 2rem;
   margin-bottom: 0.4rem;
+  background-color: white;
+  border: 0.5px solid #dfdfdf;
+  border-radius: 5px;
 }
 .schedule-page .schedule-page__form .form-row__container input:hover {
   border: 1px solid #9756E7;
