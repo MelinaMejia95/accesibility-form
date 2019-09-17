@@ -10,7 +10,6 @@ html {
 body {
   margin: 0;
   height: 100%;
-  font-family: "Manjari", sans-serif;
 }
 
 .main-header {
@@ -22,13 +21,13 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
+  font-family: "Poppins", sans-serif;
 }
 .main-header .menu-button {
   padding: 0.5rem;
   border-radius: 10px;
   font-family: inherit;
   font-size: 1rem;
-  font-weight: bold;
   background-color: #EE587D;
   border: 3px solid #EE587D;
   color: white;
@@ -40,9 +39,11 @@ body {
 .main-header a {
   text-decoration: none;
   color: white;
-  height: 1.5rem;
 }
 
+main {
+  font-family: "Manjari", sans-serif;
+}
 main .main-title {
   text-align: center;
   color: #6446B2;
@@ -57,6 +58,13 @@ main .package {
   overflow: hidden;
   padding: 0 2rem;
 }
+main .package .package-title {
+  font-weight: bold;
+  color: #EE587D;
+}
+main .package .package-subtitle {
+  font-size: 1.3rem;
+}
 main .package:hover {
   border-color: #EE587D;
 }
@@ -67,6 +75,7 @@ main .package:hover {
   justify-content: flex-end;
   width: 100%;
   padding: 0 1rem;
+  font-family: "Poppins", sans-serif;
 }
 .menu .menu-list {
   margin: 0;
@@ -79,7 +88,7 @@ main .package:hover {
   cursor: pointer;
 }
 .menu .menu-list li {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 .menu .menu-list li a {
   color: white;
@@ -96,6 +105,7 @@ main .package:hover {
 }
 
 .main-footer {
+  font-family: "Poppins", sans-serif;
   background-color: black;
   color: white;
   height: 4rem;

@@ -11,7 +11,6 @@ html {
 body {
   margin: 0;
   height: 100%;
-  font-family: "Manjari", sans-serif;
 }
 
 .main-header {
@@ -23,13 +22,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
+  font-family: "Poppins", sans-serif;
+
 
   .menu-button {
     padding: 0.5rem;
     border-radius: 10px;
     font-family: inherit;
     font-size: 1rem;
-    font-weight: bold;
     background-color: #EE587D;
     border: 3px solid #EE587D;
     color: white;
@@ -43,12 +43,13 @@ body {
   a {
     text-decoration: none;
     color: white;
-    height: 1.5rem;
   }
 
 }
 
 main {
+  font-family: "Manjari", sans-serif;
+
   .main-title{
     text-align: center;
     color: #6446B2;
@@ -63,6 +64,15 @@ main {
     margin: 2rem;
     overflow: hidden;
     padding: 0 2rem;
+
+    .package-title {
+      font-weight: bold;
+      color: #EE587D;
+    }
+
+    .package-subtitle {
+      font-size: 1.3rem;
+    }
   }
 
   .package:hover {
@@ -76,6 +86,7 @@ main {
   justify-content: flex-end;
   width: 100%;
   padding: 0 1rem;
+  font-family: "Poppins", sans-serif;
 
   .menu-list {
     margin: 0;
@@ -88,7 +99,7 @@ main {
     cursor: pointer;
 
     li {
-      font-size: 2rem;
+      font-size: 1rem;
       a {
         color: white;
         text-decoration: none;
@@ -108,6 +119,7 @@ main {
 }
 
 .main-footer{
+  font-family: "Poppins", sans-serif;
   background-color: black;
   color: white;
   height: 4rem;
