@@ -11,6 +11,15 @@
 </head>
 
 <body>
+  <div class="modal-overlay" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal">
+      <h1 id="modal-title" class="modal__title">Do you want to continue?</h1>
+      <div class="modal__actions">
+        <a href="../index.html" class="modal__action">Yes!</a>
+        <button class="modal__action modal__action--negative" type="button" onclick="closeModal()">No!</button>
+      </div>
+    </div>
+  </div>
   <header class="main-header">
     <a href="../index.html" tabindex="0">COOL NAME</a>
     <button aria-expanded="false" class="menu-button">Menu</button>
@@ -25,31 +34,23 @@
       <li><a href="/contact">Contact</a></li>
     </ul>
   </div>
-  <div class="backdrop" hidden></div>
-  <dialog class="modal" role="dialog" aria-labelledby="modal-title" hidden>
-    <h1 id="modal-title" class="modal__title">Do you want to continue?</h1>
-    <div class="modal__actions">
-      <a href="../index.html" class="modal__action">Yes!</a>
-      <button class="modal__action modal__action--negative" type="button">No!</button>
-    </div>
-  </dialog>
   <main class="schedule-page">
     <label class="schedule-page__title">Great! Let's get in touch</label>
     <form class="schedule-page__form" novalidate>
-      <label for="names" id="namesLabel">Name: </label>
+      <label for="name" id="nameLabel">Name: </label>
       <div class="form-row__container">
-        <input type="text" id="names" aria-labelledby="namesLabel" aria-required="true" required >
-        <label id="namesError" aria-live="assertive"></label>
+        <input type="text" id="name" aria-labelledby="nameLabel" aria-required="true" required >
+        <label id="nameError" aria-live="assertive"></label>
       </div>
       <label for="lastname" id="lastnameLabel">Lastname: </label>
       <div class="form-row__container">
         <input type="text" id="lastname" aria-labelledby="lastnameLabel" aria-required="true">
-        <label id="lastnameError">Please enter your lastname</label>
+        <label id="lastnameError" aria-live="assertive"></label>
       </div>
       <label for="email" id="emailLabel">Email: </label>
       <div class="form-row__container">
         <input type="email" id="email" aria-labelledby="email" aria-required="true">
-        <label id="emailError">Make sure your email is correct</label>
+        <label id="emailError" aria-live="assertive"></label>
       </div>
       <label for="cellphone" id="cellphoneLabel">Cellphone: </label>
       <div class="form-row__container">
@@ -63,7 +64,7 @@
           <option value="">Cali</option>
           <option value="">Bogotá</option>
         </select>
-        <label for="">Please select your city</label>
+        <label id="cityError" aria-live="assertive"></label>
       </div>
       <button type="submit" class="button">
         Send
@@ -74,7 +75,6 @@
   <footer class="main-footer">
     <label for="">Made with ❤️ in Medellín</label>
   </footer>
-  <script src="https://cdn.jsdelivr.net/ally.js/1.4.1/ally.min.js"></script>
   <script src="index.js"></script>
   <script src="../index.js"></script>
 

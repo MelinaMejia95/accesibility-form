@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "ally.js": "^1.4.1"
   },
   "devDependencies": {},
   "scripts": {
