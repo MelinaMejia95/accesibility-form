@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="../favicon.png">
   <link rel="stylesheet" href="./tours.css">
   <link rel="stylesheet" href="../main.css">
-  <title>Document</title>
+  <title>Space Co-working</title>
 </head>
 
 <body>
@@ -15,31 +16,31 @@
     <div class="modal">
       <h1 id="modal-title" class="modal__title">Do you want to continue?</h1>
       <div class="modal__actions">
-        <a href="../index.html" class="modal__action">Yes!</a>
+        <button class="modal__action" onclick="showThanksMessage()">Yes!</button>
         <button class="modal__action modal__action--negative" type="button" onclick="closeModal()">No!</button>
       </div>
     </div>
   </div>
   <header class="main-header">
-    <a href="../index.html" tabindex="0">COOL NAME</a>
+    <a href="../index.html" tabindex="0">Space Co-working</a>
     <button aria-expanded="false" class="menu-button">Menu</button>
   </header>
   <div class="menu">
     <ul hidden id="menu-list" class="menu-list">
-      <li><a href="/">Home</a></li>
+      <li><a href="../index.html">Home</a></li>
       <li>
         <a href="tours/index.html" tabindex="0">Book a tour</a>
       </li>
-      <li><a href="/shop">About us</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="../index.html">About us</a></li>
+      <li><a href="../index.html">Contact</a></li>
     </ul>
   </div>
   <main class="schedule-page">
     <label class="schedule-page__title">Great! Let's get in touch</label>
-    <form class="schedule-page__form" novalidate>
+    <form class="schedule-page__form" novalidate autocomplete="off">
       <label for="name" id="nameLabel">Name: </label>
       <div class="form-row__container">
-        <input type="text" id="name" aria-labelledby="nameLabel" aria-required="true" required >
+        <input type="text" id="name" aria-labelledby="nameLabel" aria-required="true" required>
         <label id="nameError" aria-live="assertive"></label>
       </div>
       <label for="lastname" id="lastnameLabel">Lastname: </label>
@@ -60,9 +61,9 @@
       <div class="form-row__container">
         <select name="cities" id="city" aria-labelledby="cityLabel" aria-required="true">
           <option value="">Select an option</option>
-          <option value="">Medellín</option>
-          <option value="">Cali</option>
-          <option value="">Bogotá</option>
+          <option value="medellin">Medellín</option>
+          <option value="cali">Cali</option>
+          <option value="bogota">Bogotá</option>
         </select>
         <label id="cityError" aria-live="assertive"></label>
       </div>
@@ -77,7 +78,6 @@
   </footer>
   <script src="index.js"></script>
   <script src="../index.js"></script>
-
 </body>
 
 </html>

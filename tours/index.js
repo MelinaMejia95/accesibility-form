@@ -4,7 +4,7 @@ var button = document.querySelector('.button');
 var closeModalButton = document.querySelector('.modal__action--negative');
 var lastFocus;
 var modalOpen = false;
-const element = document.querySelector('form');
+const form = document.querySelector('form');
 const elements = [
   {
     field: 'name',
@@ -29,10 +29,10 @@ const elements = [
 ]
 
 // restrict tab focus on elements only inside modal window
-window.addEventListener('keypress', focusRestrict);
+window.addEventListener('keypress', () => focusRestrict());
 
 //open modal only when all fields are valid
-element.addEventListener('submit', (event) => {
+form.addEventListener('submit', (event) => {
   event.preventDefault();
   try {
     elements.map((el) => {
@@ -57,7 +57,7 @@ element.addEventListener('submit', (event) => {
   }
 });
 
-function openModal() {
+openModal = () => {
   lastFocus = document.activeElement;
   modalOpen = true;
   modal.setAttribute("aria-hidden", false);
@@ -66,18 +66,27 @@ function openModal() {
   document.querySelector('#modal-title').focus();
 }
 
-function closeModal() {
+closeModal = () => {
   modal.setAttribute("aria-hidden", true);
   lastFocus.focus();
 }
 
-function focusRestrict(event) {
+focusRestrict = (event) => {
   document.addEventListener('focus', function (event) {
     if (modalOpen && !modal.contains(event.target)) {
       event.stopPropagation();
       modal.focus();
     }
   }, true);
+}
+
+function showThanksMessage() {
+  modal.setAttribute("aria-hidden", true);  
+  form.hidden = true;
+  const thanksMessage = document.querySelector('#schedule-page__message');
+  thanksMessage.hidden = false;
+  thanksMessage.setAttribute('tabindex', '0');
+  thanksMessage.focus();
 }
 
 //validate fields are not empty
@@ -87,6 +96,8 @@ function validateName(field, errorField, message) {
   if (inputElement.value === '' || inputElement.value === undefined) {
     inputElement.focus();
     labelElement.innerHTML = message;
+    labelElement.hidden = false;
+    console.log(labelElement.innerHTML)
     throw new Error(`Whooops!' ${inputElement.id} field is empty`);
   } else {
     labelElement.hidden = true;
@@ -100,6 +111,7 @@ function validateEmail(email, errorField, message) {
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!re.test(emailInput.value)) {
     labelEmailError.innerHTML = message;
+    labelEmailError.hidden = false;
     throw new Error(`Whooops!' Email field is empty`);
   } else {
     labelEmailError.hidden = true;

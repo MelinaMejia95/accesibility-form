@@ -32,8 +32,9 @@
         border-radius: 5px;
       }
 
-      input:hover {
+      input:hover, input:focus, select:hover, select:focus {
         border: 1px solid #9756E7;
+        outline: none;
       }
       
       label {
@@ -74,6 +75,7 @@
 }
 
 .modal-overlay {
+  font-family: "Manjari", sans-serif;
   background: rgba(0, 0, 0, 0.5);
   height: 100%;
   left: 0;

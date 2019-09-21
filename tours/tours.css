@@ -29,8 +29,9 @@
   border: 0.5px solid #dfdfdf;
   border-radius: 5px;
 }
-.schedule-page .schedule-page__form .form-row__container input:hover {
+.schedule-page .schedule-page__form .form-row__container input:hover, .schedule-page .schedule-page__form .form-row__container input:focus, .schedule-page .schedule-page__form .form-row__container select:hover, .schedule-page .schedule-page__form .form-row__container select:focus {
   border: 1px solid #9756E7;
+  outline: none;
 }
 .schedule-page .schedule-page__form .form-row__container label {
   font-size: 0.7rem;
@@ -61,6 +62,7 @@
 }
 
 .modal-overlay {
+  font-family: "Manjari", sans-serif;
   background: rgba(0, 0, 0, 0.5);
   height: 100%;
   left: 0;
