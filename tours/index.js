@@ -26,7 +26,7 @@ const elements = [
     labelError: 'cityError',
     errorMessage: 'Please select your city'
   }
-]
+];
 
 // restrict tab focus on elements only inside modal window
 window.addEventListener('keypress', () => focusRestrict());
@@ -41,15 +41,7 @@ form.addEventListener('submit', (event) => {
       } else {
         validateEmail(el.field, el.labelError, el.errorMessage);
       }
-    })
-    /* const nameInput = document.querySelector('#name');
-    const labelNameError = document.querySelector('#nameError');
-    validateName(nameInput, labelNameError);
-    const lastnameInput = document.querySelector('#lastname');
-    const labelLastnameError = document.querySelector('#lastnameError');
-    validateName(lastnameInput, labelLastnameError);
-    const emailInput = document.querySelector('#email');
-    const labelEmailError = document.querySelector('#emailError'); */
+    });
     openModal();
   }
   catch (err) {
@@ -80,7 +72,7 @@ focusRestrict = (event) => {
   }, true);
 }
 
-function showThanksMessage() {
+showThanksMessage = () => {
   modal.setAttribute("aria-hidden", true);  
   form.hidden = true;
   const thanksMessage = document.querySelector('#schedule-page__message');
@@ -90,7 +82,7 @@ function showThanksMessage() {
 }
 
 //validate fields are not empty
-function validateName(field, errorField, message) {
+validateName = (field, errorField, message) => {
   const inputElement = document.querySelector(`#${field}`);
   const labelElement = document.querySelector(`#${errorField}`);
   if (inputElement.value === '' || inputElement.value === undefined) {
@@ -105,7 +97,7 @@ function validateName(field, errorField, message) {
 }
 
 //validate email structure
-function validateEmail(email, errorField, message) {
+validateEmail = (email, errorField, message) => {
   const emailInput = document.querySelector(`#${email}`);
   const labelEmailError = document.querySelector(`#${errorField}`);
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

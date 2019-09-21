@@ -45,6 +45,7 @@ body {
   }
 
   a {
+    font-size: 1rem;
     text-decoration: none;
     color: white;
   }
@@ -61,13 +62,13 @@ main {
   }
 
   .package {
-    width: 50%;
     background-color: #c190dd24;
     border: 4px solid #342964;
     position: relative;
-    margin: 2rem;
     overflow: hidden;
     padding: 0 2rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
 
     .package-title {
       font-weight: bold;
@@ -82,6 +83,7 @@ main {
   .package:hover {
     border-color: #EE587D;
   }
+
 }
 
 .menu {
@@ -91,6 +93,7 @@ main {
   width: 100%;
   padding: 0 1rem;
   font-family: "Poppins", sans-serif;
+  z-index: 1;
 
   .menu-list {
     margin: 0;
@@ -134,3 +137,31 @@ main {
 }
 
 [hidden] { display: none !important; }
+
+@media (min-width: 40rem) {
+
+  .main-header {
+  
+    a {
+      font-size: 2rem;
+    }
+  
+  }
+  
+  main {
+  
+    .main-title{
+      text-align: center;
+      color: #6446B2;
+      font-weight: bold;
+    }
+  
+    .package {
+      width: 50%;
+      margin: 2rem;
+      padding: 0 2rem;
+    }
+
+  }
+  
+}

@@ -41,6 +41,7 @@ body {
   color: #EE587D;
 }
 .main-header a {
+  font-size: 1rem;
   text-decoration: none;
   color: white;
 }
@@ -54,13 +55,13 @@ main .main-title {
   font-weight: bold;
 }
 main .package {
-  width: 50%;
   background-color: #c190dd24;
   border: 4px solid #342964;
   position: relative;
-  margin: 2rem;
   overflow: hidden;
   padding: 0 2rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
 }
 main .package .package-title {
   font-weight: bold;
@@ -80,6 +81,7 @@ main .package:hover {
   width: 100%;
   padding: 0 1rem;
   font-family: "Poppins", sans-serif;
+  z-index: 1;
 }
 .menu .menu-list {
   margin: 0;
@@ -121,6 +123,23 @@ main .package:hover {
 
 [hidden] {
   display: none !important;
+}
+
+@media (min-width: 40rem) {
+  .main-header a {
+    font-size: 2rem;
+  }
+
+  main .main-title {
+    text-align: center;
+    color: #6446B2;
+    font-weight: bold;
+  }
+  main .package {
+    width: 50%;
+    margin: 2rem;
+    padding: 0 2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
