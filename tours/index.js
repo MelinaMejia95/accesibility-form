@@ -27,6 +27,7 @@ const elements = [
     errorMessage: 'Please select your city'
   }
 ];
+document.querySelector('#main-label').focus();
 
 // restrict tab focus on elements only inside modal window
 window.addEventListener('keypress', () => focusRestrict());
@@ -102,10 +103,18 @@ validateEmail = (email, errorField, message) => {
   const labelEmailError = document.querySelector(`#${errorField}`);
   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!re.test(emailInput.value)) {
+    emailInput.focus();
     labelEmailError.innerHTML = message;
     labelEmailError.hidden = false;
     throw new Error(`Whooops!' Email field is empty`);
   } else {
     labelEmailError.hidden = true;
+  }
+}
+
+//onChange handler
+onChangeHandler = (input, errorLabel) => {
+  if(document.querySelector(`#${input}`).value !== undefined) {
+    document.querySelector(`#${errorLabel}`).hidden = true;
   }
 }

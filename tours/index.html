@@ -21,36 +21,39 @@
       </div>
     </div>
   </div>
-  <header class="main-header">
+  <header class="main-header" role="menubar">
     <a href="../index.html" tabindex="0">Space Co-working</a>
     <button aria-expanded="false" class="menu-button">Menu</button>
   </header>
-  <div class="menu">
+  <div class="menu" role="menu">
     <ul hidden id="menu-list" class="menu-list">
       <li><a href="../index.html">Home</a></li>
       <li>
-        <a href="tours/index.html" tabindex="0">Book a tour</a>
+        <a href="index.html" tabindex="0">Book a tour</a>
       </li>
       <li><a href="../index.html">About us</a></li>
       <li><a href="../index.html">Contact</a></li>
     </ul>
   </div>
-  <main class="schedule-page">
-    <label class="schedule-page__title">Great! Let's get in touch</label>
+  <main class="schedule-page" role="main">
+    <label class="schedule-page__title" id="main-label">Great! Let's get in touch</label>
     <form class="schedule-page__form" novalidate autocomplete="off">
       <label for="name" id="nameLabel">Name: </label>
       <div class="form-row__container">
-        <input type="text" id="name" aria-labelledby="nameLabel" aria-required="true" required>
+        <input type="text" id="name" aria-labelledby="nameLabel" aria-required="true"
+          oninput="onChangeHandler('name', 'nameError')">
         <label id="nameError" aria-live="assertive"></label>
       </div>
       <label for="lastname" id="lastnameLabel">Lastname: </label>
       <div class="form-row__container">
-        <input type="text" id="lastname" aria-labelledby="lastnameLabel" aria-required="true">
+        <input type="text" id="lastname" aria-labelledby="lastnameLabel" aria-required="true"
+          oninput="onChangeHandler('lastname', 'lastnameError')">
         <label id="lastnameError" aria-live="assertive"></label>
       </div>
       <label for="email" id="emailLabel">Email: </label>
       <div class="form-row__container">
-        <input type="email" id="email" aria-labelledby="email" aria-required="true">
+        <input type="email" id="email" aria-labelledby="email" aria-required="true"
+          oninput="onChangeHandler('email', 'emailError')">
         <label id="emailError" aria-live="assertive"></label>
       </div>
       <label for="cellphone" id="cellphoneLabel">Cellphone: </label>
@@ -60,7 +63,7 @@
       <label for="city" id="cityLabel">City: </label>
       <div class="form-row__container">
         <select name="cities" id="city" aria-labelledby="cityLabel" aria-required="true">
-          <option value="">Select an option</option>
+          <option value="" disabled selected>Select an option</option>
           <option value="medellin">Medellín</option>
           <option value="cali">Cali</option>
           <option value="bogota">Bogotá</option>
