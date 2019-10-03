@@ -40,29 +40,29 @@
     <form class="schedule-page__form" novalidate autocomplete="off">
       <label for="name" id="nameLabel">Name: </label>
       <div class="form-row__container">
-        <input type="text" id="name" aria-labelledby="nameLabel" aria-required="true"
-          oninput="onChangeHandler('name', 'nameError')">
+        <input type="text" id="name" aria-required="true"
+          oninput="onChangeHandler('name', 'nameError')" onfocus="onFocusHandler('name')">
         <label id="nameError" aria-live="assertive"></label>
       </div>
       <label for="lastname" id="lastnameLabel">Lastname: </label>
       <div class="form-row__container">
-        <input type="text" id="lastname" aria-labelledby="lastnameLabel" aria-required="true"
-          oninput="onChangeHandler('lastname', 'lastnameError')">
+        <input type="text" id="lastname" aria-required="true"
+          oninput="onChangeHandler('lastname', 'lastnameError')" onfocus="onFocusHandler('lastname')">
         <label id="lastnameError" aria-live="assertive"></label>
       </div>
       <label for="email" id="emailLabel">Email: </label>
       <div class="form-row__container">
-        <input type="email" id="email" aria-labelledby="email" aria-required="true"
-          oninput="onChangeHandler('email', 'emailError')">
+        <input type="email" id="email" aria-required="true"
+          oninput="onChangeHandler('email', 'emailError')" onfocus="onFocusHandler()">
         <label id="emailError" aria-live="assertive"></label>
       </div>
       <label for="cellphone" id="cellphoneLabel">Cellphone: </label>
       <div class="form-row__container">
-        <input type="text" id="cellphone" aria-labelledby="cellphoneLabel">
+        <input type="text" id="cellphone" onfocus="onFocusHandler('cellphone')">
       </div>
       <label for="city" id="cityLabel">City: </label>
       <div class="form-row__container">
-        <select name="cities" id="city" aria-labelledby="cityLabel" aria-required="true">
+        <select name="cities" id="city" aria-required="true" onfocus="onFocusHandler('city')">
           <option value="" disabled selected>Select an option</option>
           <option value="medellin">Medellín</option>
           <option value="cali">Cali</option>

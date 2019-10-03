@@ -38,7 +38,7 @@ form.addEventListener('submit', (event) => {
   try {
     elements.map((el) => {
       if (el.field !== "email") {
-        validateName(el.field, el.labelError, el.errorMessage);
+        validateFields(el.field, el.labelError, el.errorMessage);
       } else {
         validateEmail(el.field, el.labelError, el.errorMessage);
       }
@@ -51,7 +51,6 @@ form.addEventListener('submit', (event) => {
 });
 
 openModal = () => {
-  lastFocus = document.activeElement;
   modalOpen = true;
   modal.setAttribute("aria-hidden", false);
   modal.setAttribute('tabindex', '0');
@@ -62,6 +61,7 @@ openModal = () => {
 closeModal = () => {
   modal.setAttribute("aria-hidden", true);
   lastFocus.focus();
+  modalOpen = false;
 }
 
 focusRestrict = (event) => {
@@ -83,14 +83,13 @@ showThanksMessage = () => {
 }
 
 //validate fields are not empty
-validateName = (field, errorField, message) => {
+validateFields = (field, errorField, message) => {
   const inputElement = document.querySelector(`#${field}`);
   const labelElement = document.querySelector(`#${errorField}`);
   if (inputElement.value === '' || inputElement.value === undefined) {
     inputElement.focus();
     labelElement.innerHTML = message;
     labelElement.hidden = false;
-    console.log(labelElement.innerHTML)
     throw new Error(`Whooops!' ${inputElement.id} field is empty`);
   } else {
     labelElement.hidden = true;
@@ -114,7 +113,13 @@ validateEmail = (email, errorField, message) => {
 
 //onChange handler
 onChangeHandler = (input, errorLabel) => {
+  lastFocus = document.activeElement;
   if(document.querySelector(`#${input}`).value !== undefined) {
     document.querySelector(`#${errorLabel}`).hidden = true;
   }
+}
+
+//onFocusHandler
+onFocusHandler = (id) => {
+  lastFocus = document.querySelector(`#${id}`);
 }
