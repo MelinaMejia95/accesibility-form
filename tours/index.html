@@ -41,19 +41,19 @@
       <label for="name" id="nameLabel">Name: </label>
       <div class="form-row__container">
         <input type="text" id="name" aria-required="true"
-          oninput="onChangeHandler('name', 'nameError')" onfocus="onFocusHandler('name')">
+          oninput="onChangeHandler('name', 'nameError')" onfocus="onFocusHandler('name')" onblur="onBlurHandler('nameError')">
         <label id="nameError" aria-live="assertive"></label>
       </div>
       <label for="lastname" id="lastnameLabel">Lastname: </label>
       <div class="form-row__container">
         <input type="text" id="lastname" aria-required="true"
-          oninput="onChangeHandler('lastname', 'lastnameError')" onfocus="onFocusHandler('lastname')">
+          oninput="onChangeHandler('lastname', 'lastnameError')" onfocus="onFocusHandler('lastname')" onblur="onBlurHandler('lastnameError')">
         <label id="lastnameError" aria-live="assertive"></label>
       </div>
       <label for="email" id="emailLabel">Email: </label>
       <div class="form-row__container">
         <input type="email" id="email" aria-required="true"
-          oninput="onChangeHandler('email', 'emailError')" onfocus="onFocusHandler()">
+          oninput="onChangeHandler('email', 'emailError')" onfocus="onFocusHandler()" onblur="onBlurHandler('emailError')">
         <label id="emailError" aria-live="assertive"></label>
       </div>
       <label for="cellphone" id="cellphoneLabel">Cellphone: </label>
@@ -62,7 +62,7 @@
       </div>
       <label for="city" id="cityLabel">City: </label>
       <div class="form-row__container">
-        <select name="cities" id="city" aria-required="true" onfocus="onFocusHandler('city')">
+        <select name="cities" id="city" aria-required="true" onfocus="onFocusHandler('city')" onblur="onBlurHandler('cityError')">
           <option value="" disabled selected>Select an option</option>
           <option value="medellin">Medellín</option>
           <option value="cali">Cali</option>

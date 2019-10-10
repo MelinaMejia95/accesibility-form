@@ -122,4 +122,13 @@ onChangeHandler = (input, errorLabel) => {
 //onFocusHandler
 onFocusHandler = (id) => {
   lastFocus = document.querySelector(`#${id}`);
+  if(document.querySelector(`#${id}Error`)) {
+    document.querySelector(`#${id}Error`).hidden = true;
+  }
+}
+
+onBlurHandler = (errorLabel) => {
+  if(document.querySelector(`#${errorLabel}`)) {
+    document.querySelector(`#${errorLabel}`).hidden = true;
+  }
 }
