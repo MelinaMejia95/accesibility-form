@@ -65,10 +65,7 @@ closeModal = () => {
 
 focusRestrict = (event) => {
   document.addEventListener('focus', (event) => {
-    console.log(event.target)
-    console.log(!modal.contains(event.target))
     if (modalOpen && !modal.contains(event.target)) {
-      console.log('entro')
       event.stopPropagation();
       modal.focus();
       document.querySelector('#modal-title').focus();
