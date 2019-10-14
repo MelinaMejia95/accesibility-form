@@ -53,7 +53,6 @@ form.addEventListener('submit', (event) => {
 openModal = () => {
   modalOpen = true;
   modal.setAttribute("aria-hidden", false);
-  modal.setAttribute('tabindex', '0');
   document.querySelector('#modal-title').setAttribute('tabindex', '0');
   document.querySelector('#modal-title').focus();
 }
@@ -65,10 +64,14 @@ closeModal = () => {
 }
 
 focusRestrict = (event) => {
-  document.addEventListener('focus', function (event) {
+  document.addEventListener('focus', (event) => {
+    console.log(event.target)
+    console.log(!modal.contains(event.target))
     if (modalOpen && !modal.contains(event.target)) {
+      console.log('entro')
       event.stopPropagation();
       modal.focus();
+      document.querySelector('#modal-title').focus();
     }
   }, true);
 }
