@@ -105,7 +105,7 @@ validateEmail = (email, errorField, message) => {
     emailInput.focus();
     labelEmailError.innerHTML = message;
     labelEmailError.hidden = false;
-    throw new Error(`Whooops!' Email field is empty`);
+    throw new Error(`Whooops!' Email structure is not correct`);
   } else {
     labelEmailError.hidden = true;
   }
